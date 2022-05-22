@@ -1,0 +1,11 @@
+import Collection from 0x02
+
+transaction(playerName: String, serial: Int, setName: String, account: Address) {
+
+    prepare(signer: AuthAccount) {}
+
+    execute {
+        Collection.addMome(playerName: playerName, serial: serial, setName: setName, account: account)
+        log("We're done.")
+    }
+}
