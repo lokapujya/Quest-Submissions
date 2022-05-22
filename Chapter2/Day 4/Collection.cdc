@@ -16,6 +16,11 @@ pub contract Collection {
         }
     }
 
+    pub fun addMome(playerName: String, serial: Int, setName: String, account: Address) {
+        let newMome = Mome(_playerName: playerName, _serial: serial, _setName: setName, _account: account)
+        self.momes[account] = newMome
+    }
+
     init() {
         self.momes = {}
     }
