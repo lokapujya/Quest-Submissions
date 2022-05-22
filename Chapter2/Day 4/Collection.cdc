@@ -1,5 +1,7 @@
 pub contract Collection {
 
+    pub var momes: {Address: Mome}
+
     pub struct Mome {
         pub let playerName: String
         pub let serial: Int
@@ -12,6 +14,10 @@ pub contract Collection {
             self.setName = _setName
             self.account = _account
         }
+    }
+
+    init() {
+        self.momes = {}
     }
 
 }
