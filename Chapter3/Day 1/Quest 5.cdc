@@ -8,8 +8,8 @@ pub contract Test {
         }
     }
 
-    pub fun createJacob(): Jacob { // there is 1 here
-        let myJacob = Jacob() // there are 2 here
-        return myJacob // there is 1 here
+    pub fun createJacob(): @Jacob { // there is 1 here
+        let myJacob <- create Jacob() // there are 2 here
+        return <- myJacob // there is 1 here
     }
 }
